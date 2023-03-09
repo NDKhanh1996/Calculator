@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy tinh</title>
+</head>
+<body>
+<h1>Calculator</h1>
+<table>
+    <tr>
+        <td colspan="2"><input type="number" id="FirstNumber" placeholder="Nhập số đầu tiên" value=""></td>
+        <td colspan="2"><input type="number" id="SecondNumber" placeholder="Nhập số thứ hai" value=""></td>
+    </tr>
+    <tr>
+        <td><input type="button" id="Button+" value="Cộng" onclick="TinhCong()"></td>
+        <td><input type="button" id="Button-" value="Trừ" onclick="TinhTru()"></td>
+        <td><input type="button" id="Buttonx" value="Nhân" onclick="TinhNhan()"></td>
+        <td><input type="button" id="Button/" value="Chia" onclick="TinhChia()"></td>
+    </tr>
+</table>
+<h3>Result:</h3>
+<p id="KetQua"></p>
+
+<script>
+    let FN = document.getElementById('FirstNumber')
+    let SN = document.getElementById('SecondNumber')
+    function TinhCong(){
+        let Plus = +(FN.value) + +(SN.value)
+        document.getElementById("KetQua").innerHTML=Plus
+    }
+    function TinhTru() {
+        let Minus = +(FN.value) - +(SN.value)
+        document.getElementById("KetQua").innerHTML=Minus
+    }
+    function TinhNhan() {
+        let Multiply = +(FN.value) * +(SN.value);
+        document.getElementById("KetQua").innerHTML=Multiply;
+
+    }
+    function TinhChia() {
+        let Division = +(FN.value) / +(SN.value)
+        document.getElementById("KetQua").innerHTML=Division
+
+    }
+</script>
+</body>
+</html>
